@@ -12,9 +12,9 @@ set -g clock-mode-style 12
 set -g renumber-windows on
 
 # use 256 colors
-# set -g default-terminal 'tmux-256color-italic'
-# set-option -ga terminal-overrides ",xterm-256color-italic:Tc"
-# set -g default-terminal "tmux-256color-italic"
+set -g default-terminal 'tmux-256color-italic'
+set-option -ga terminal-overrides ",xterm-256color-italic:Tc"
+set -g default-terminal "tmux-256color-italic"
 
 # change tmux bar colors
  set -g status-bg '#666666'
