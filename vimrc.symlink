@@ -114,7 +114,7 @@ set wildignore+=*/node_modules/
 "
 
 "set number            " Enable line numbers
-set relativenumber
+set number relativenumber
 set scrolloff=5       " Leave 5 lines of buffer when scrolling
 set sidescrolloff=10  " Leave 10 characters of horizontal buffer when scrolling
 
