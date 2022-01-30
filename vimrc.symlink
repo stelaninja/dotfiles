@@ -35,7 +35,11 @@ Plugin 'itchyny/lightline.vim'
 " NerdTree
 Plugin 'scrooloose/nerdtree'
 " VimWiki
-Plugin 'vimwiki/vimwiki'
+"Plugin 'vimwiki/vimwiki'
+" VimAirline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,6 +55,9 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" Always show statusline
+set laststatus=2
 
 " Leader Mappings
 map <Space> <leader>
@@ -106,7 +113,8 @@ set wildignore+=*/node_modules/
 "-------------------------------------------------------------------------------
 "
 
-set number            " Enable line numbers
+"set number            " Enable line numbers
+set relativenumber
 set scrolloff=5       " Leave 5 lines of buffer when scrolling
 set sidescrolloff=10  " Leave 10 characters of horizontal buffer when scrolling
 
@@ -115,12 +123,14 @@ set sidescrolloff=10  " Leave 10 characters of horizontal buffer when scrolling
 "-------------------------------------------------------------------------------
 
 " Lightline colorscheme
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
+"let g:lightline = {
+"      \ 'colorscheme': 'wombat',
+"      \ }
 
 " colorscheme solarized
+syntax enable
 set background=dark
+colorscheme solarized
 
 " Showcase comments in italics
 highlight Comment cterm=italic gui=italic
@@ -130,6 +140,9 @@ nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 nnoremap <C-j> :bprev<CR>
 nnoremap <C-k> :bnext<CR>
+
+" Use Powerline-fonts
+let g:airline_powerline_fonts = 1
 
 " Find/replace
 vnoremap <C-r> "hy:%s/<C-r>h//g<left><left><left>

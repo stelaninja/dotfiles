@@ -11,10 +11,13 @@ set -g clock-mode-style 12
 # Renumber windows after removing one
 set -g renumber-windows on
 
+
+
 # use 256 colors
-set -g default-terminal 'tmux-256color-italic'
-set-option -ga terminal-overrides ",xterm-256color-italic:Tc"
-set -g default-terminal "tmux-256color-italic"
+# set -g default-terminal "screen-256color"
+#set -g default-terminal 'tmux-256color-italic'
+#set-option -ga terminal-overrides ",xterm-256color-italic:Tc"
+#set -g default-terminal "tmux-256color-italic"
 
 # change tmux bar colors
  set -g status-bg '#666666'
@@ -33,6 +36,9 @@ set -g status-left-length 40
 set -g status-left '[#S]'
 set -g status-right "%I:%M %p "
 # set -g status-right "#[fg=red][44%%]#[default]   -  %I:%M %p "
+
+# force tmux to use utf-8
+setw -gq utf8 on
 
 # Reload tmux.conf with prefix-r
 bind C-r source-file ~/.tmux.conf \; display "Reloaded ~/.tmux.conf"
